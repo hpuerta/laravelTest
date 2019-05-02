@@ -13,11 +13,6 @@ class ProjectsController extends Controller
 
     	return view('projects.index',['projects'=> $projects]);
     }
-
-    public function create(){
-    	return view('projects.create');
-    }
-
     public function store(){
     	$project = new Project();
     	$project->title=request('title');
@@ -25,5 +20,22 @@ class ProjectsController extends Controller
     	$project->save();
     	return redirect('/projects');
     }
+    public function create(){
+    	return view('projects.create');
+    }
+	public function show(){
+    	
+    }
+    public function edit(){
+    	return view('projects.edit');
+    	
+    }
+    public function update(){
+    	
+    }
+    public function destroy(){
+    	
+    }
+    
     
 }

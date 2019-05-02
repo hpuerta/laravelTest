@@ -1,3 +1,7 @@
+@extends('layout')
+
+@section('content')
+
 <h2>Create Project</h2>
 <form method="POST" action="/projects">
 	{{csrf_field()}}
@@ -11,3 +15,5 @@
 		<button type="submit">Create project</button>
 	</div>
 </form>
+
+@endsection
